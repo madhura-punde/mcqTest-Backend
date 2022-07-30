@@ -2,7 +2,7 @@
 Backend for Online MCQ Test Application
 
 I have created this backend project for MCQ Test Applocation. 
-For this, I have use mongoose and express framework.
+For this, I have used mongoose and express framework.
 
 Consider Teacher-Student scenerio
 
