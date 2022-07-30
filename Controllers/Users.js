@@ -1,11 +1,14 @@
 
-const teachers = [{id : 1}]
-const students = [{id : 1, AssignedTest : []},
-{id: 2, AssignedTest: []}
+const teachers = [{id : 1, type : "teacher"}]
+const students = [{id : 1, type:"student", AssignedTest : []},
+{id: 2,type : "student", AssignedTest: []}
 ]
 
+combinedArrayUser = [...teachers, ...students]
+console.log(combinedArrayUser)
+
 exports.ListUsers = (req,res)=>{
-    res.send(students )
+    res.send(combinedArrayUser)
     
 }
 

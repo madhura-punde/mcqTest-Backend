@@ -21,10 +21,10 @@ exports.getMCQData = (req, res)=> {
 }
 
 
-
+//To add 1 question in some specific test here ex.Test1
 exports.addMCQ = (req, res)=>{
     console.log("addMCQ Method")
-    console.log(req.body)
+   // console.log(req.body)
    const newquestion = new McqResults({
 
     question : req.body.question,
@@ -46,7 +46,7 @@ exports.addMCQ = (req, res)=>{
 
 }
 
-
+//Total collection count in DB
 exports.getTotalCount = (req, res)=>{ 
   
 
@@ -63,8 +63,7 @@ exports.getTotalCount = (req, res)=>{
         if(err){
             res.status(200).json({
                 Error : err
-            })
-        }
+            })}
         else(
             res.status(200).json({
                 TestCollection : names.length,
@@ -75,32 +74,14 @@ exports.getTotalCount = (req, res)=>{
         )
        
     });
-   
-    
-//To count Documents in a collection
-
-    // McqResults.countDocuments(function (err, count) {
-    //     if (err){
-    //         //console.log(err)
-    //         res.status(200).json({
-    //             Error : err
-    //         })
-    //     }
-    //     else{
-    //         //console.log("Count :", count)
-    //         res.status(200).json({
-    //             DocumentCount : count
-    //         })
-    //     }
-    // });
-
-
 }
 
+
+//creating a fresh new Test
 exports.createnewTest = (req, res)=>{
     const testName = req.body.testName
     const New_mcqs = req.body.mcqs
-    //console.log(req.body.mcqs)
+   // console.log(req.body)
 
     //Creating Database which user is giving for test
    const newDB = mongoose.model(`${testName}`,MCQSchema1)

@@ -7,6 +7,7 @@ const test = require('./Routes/backend')
 
 const PORT= 8080
 
+//mongodb connection 
 mongoose.connect('mongodb://127.0.0.1:27017/mcqTest',
      ()=>{
     console.log("mongoDB connected")},

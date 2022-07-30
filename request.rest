@@ -12,4 +12,41 @@ Content-Type: application/json
     "AssignedTest" : "Test4"
 
 }
+###
+
+GET http://localhost:8080/allQuestions
+
+###
+GET http://localhost:8080/count
+
+
+###
+POST http://localhost:8080/new
+Content-Type: application/json
+
+{
+    "testName" : "CBasics",
+    "mcqs":[
+        {"question" : "In C, parameters are always ",
+        "A": "Passed by value",
+        "B": "Passed by reference",
+        "C":"Non-pointer variables are passed by value and pointers are passed by reference",
+        "D" : "Passed by value result" 
+        },
+
+        {"question":"Which of the following is true about return type of functions in C?",
+        "A":"Functions can return any type",
+        "B":"Functions can return any type except array, functions and union",
+        "C":"Functions can return any type except array and functions",
+        "D":"Functions can return any type except array, functions, function pointer and union"
+        },
+        {"question":"Why is a macro used in place of a function?",
+        "A":"It reduces execution time.",
+        "B":"It reduces code size.",
+        "C":"It increases execution time.",
+        "D":"It increases code size."
+        }
+
+    ]
+}
 
