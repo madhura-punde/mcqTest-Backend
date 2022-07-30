@@ -1,0 +1,15 @@
+GET http://localhost:8080/users
+
+###
+
+POST http://localhost:8080/assign
+Content-Type: application/json
+
+
+{
+    "teacherID" : "1",
+    "studentID" : "2",
+    "AssignedTest" : "Test4"
+
+}
+
